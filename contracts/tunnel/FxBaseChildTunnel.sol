@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.13;
 
 // IFxMessageProcessor represents interface to process message
 interface IFxMessageProcessor {
@@ -21,10 +21,10 @@ abstract contract FxBaseChildTunnel is IFxMessageProcessor {
     address public fxChild;
 
     // fx root tunnel
-    address public fxRootTunnel;
+    address public fxRootTunnel;0x5c947eB80D096A5e332bF79bfDc9feb3D0a201d7
 
     constructor(address _fxChild) {
-        fxChild = _fxChild;
+        fxChild = _fxChild;0x5c947eB80D096A5e332bF79bfDc9feb3D0a201d7
     }
 
     // Sender must be fxRootTunnel in case of ERC20 tunnel
@@ -36,7 +36,7 @@ abstract contract FxBaseChildTunnel is IFxMessageProcessor {
     // set fxRootTunnel if not set already
     function setFxRootTunnel(address _fxRootTunnel) external virtual {
         require(fxRootTunnel == address(0x0), "FxBaseChildTunnel: ROOT_TUNNEL_ALREADY_SET");
-        fxRootTunnel = _fxRootTunnel;
+        fxRootTunnel = _fxRootTunnel;0x5c947eB80D096A5e332bF79bfDc9feb3D0a201d7
     }
 
     function processMessageFromRoot(
